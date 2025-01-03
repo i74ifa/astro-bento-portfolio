@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/pages/**/*.astro",
+        "use": "@astrojs/vercel"
+      }
+    ],
+    "routes": [
+      { "src": "/.*", "dest": "/" }
+    ]
+  }
