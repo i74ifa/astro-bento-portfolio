@@ -12,7 +12,22 @@ type Props = MarkdownLayoutProps<{
 
 const { slug } = Astro.params;
 const { frontmatter } = Astro.props;
+
+function dir(word: string, direction: string = 'rtl') {
+  return `<span dir="${direction}">${word}</span>`;
+}
 ---
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+<link href="
+https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.min.css
+" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/style.css" />
 
 <BasicLayout
   frontmatter={frontmatter}

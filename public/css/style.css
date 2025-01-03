@@ -1,0 +1,27 @@
+
+
+code, pre {
+    direction: ltr !important;
+    text-align: left !important;
+    font-family: 'Fira Code', sans-serif !important;
+
+}
+
+pre code {
+    background-color: transparent !important;
+    font-family: 'Fira Code', sans-serif !important;
+}
+
+pre span {
+    font-family: 'Fira Code' sans-serif !important;
+
+}
+
+*[dir="rtl"], *[dir="rtl"], [dir="rtl"] p {
+    font-family: "Baloo Bhaijaan 2", serif;
+    line-height: 37px;
+}
+
+a {
+    color: #a8a0ff !important;
+}
