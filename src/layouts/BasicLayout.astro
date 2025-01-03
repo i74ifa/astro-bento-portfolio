@@ -26,13 +26,13 @@ const schema =
     ? {
         "@context": "http://schema.org",
         "@type": "Person",
-        name: "Gianmarco",
-        url: "https://gianmarco.xyz",
+        name: "Hothaifa Jaber",
+        url: "https://i74ifa.netlify.app/",
         sameAs: [
-          "https://www.linkedin.com/in/gianmarco-cavallo",
+          "https://www.linkedin.com/in/i74ifa",
           "https://github.com/Ladvace",
         ],
-        image: "https://gianmarco.xyz/og-image.png",
+        image: "https://i74ifa.netlify.app//og-image.png",
         jobTitle: "Freelance Frontend Developer",
         worksFor: {
           "@type": "Organization",
@@ -53,15 +53,15 @@ const schema =
         "@type": "BlogPosting",
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": `https://gianmarco.xyz/blog/${slug}`,
+          "@id": `https://i74ifa.netlify.app/blog/${slug}`,
         },
         headline: frontmatter?.title || title,
         description: frontmatter?.description || title,
-        image: "https://gianmarco.xyz/og-image.png", //TODO: dynamic
+        image: "https://i74ifa.netlify.app/og-image.png", //TODO: dynamic
         author: {
           "@type": "Person",
           name: "Gianmarco",
-          url: "https://gianmarco.xyz",
+          url: "https://i74ifa.netlify.app",
           sameAs: [
             "https://www.linkedin.com/in/gianmarco-cavallo",
             "https://github.com/Ladvace",
@@ -72,7 +72,7 @@ const schema =
           name: "Gianmarco",
           logo: {
             "@type": "ImageObject",
-            url: "https://gianmarco.xyz/og-image.png",
+            url: "https://i74ifa.netlify.app/og-image.png",
           },
         },
         datePublished: frontmatter?.pubDate || new Date().toISOString(),
@@ -97,7 +97,7 @@ const schema =
     <meta property="og:url" content={Astro.url.origin} />
     <meta
       property="og:image"
-      content={image || "https://gianmarco.xyz/og-image.png"}
+      content={image || "https://i74ifa.netlify.app/og-image.png"}
     />
     <!-- Basic Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -105,7 +105,7 @@ const schema =
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
-      content={image || "https://gianmarco.xyz/og-image.png"}
+      content={image || "https://i74ifa.netlify.app/og-image.png"}
     />
 
     <link rel="preconnect" href="https://cdn.fontshare.com" />

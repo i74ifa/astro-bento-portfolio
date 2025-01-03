@@ -9,35 +9,36 @@ function Tooltip(props: Props) {
   const [clickCount, setClickCount] = createSignal(0);
 
   const messages = [
-    "Hi there!",
-    "Clicked again?",
-    "Still here?",
-    "Persistent, aren't you?",
-    "What's up?",
-    "Again? Really?",
-    "You're curious!",
-    "Not cool!",
-    "Give it a break!",
-    "That's annoying!",
-    "Hands off!",
-    "No more clicks!",
-    "Seriously?!",
-    "Ouch! That hurts!",
-    "You're persistent!",
-    "Why the curiosity?",
-    "I'm getting tired!",
-    "I'm bored!",
-    "Enough's enough!",
-    "Find another hobby!",
-    "Stop, please!",
-    "Okay, last one!",
-    "That's it, I'm done!",
+    "",
+    "مرحباً يا صديقي!",
+    "ما زلت هنا؟ الظاهر أنك مصمم على الفضول!",
+    "يا لك من مثابر! هل تبحث عن كنز مخفي؟",
+    "ما الجديد؟ هل تتوقع أن يحدث شيء هذه المرة؟",
+    "مرة أخرى؟ هل أنت جاد؟ أم أنك تمارس هواية الضغط؟",
+    "أنت فضولي بشكل لا يصدق! هل أنت من محبي الألغاز؟",
+    "ليس هذا لطيفًا! أشعر أنني أزرار تعاني.",
+    "آه! هذا يؤلمني! ألا ترى أنني زر ضعيف؟",
+    "ما سبب هذا الفضول؟ هل تظن أنني سأتحول إلى حورية؟",
+    "أشعر بالملل! هل يمكن أن نلعب لعبة أخرى؟",
+    "كفى! لقد طفح الكيل! أليس لدي أي حقوق؟",
+    "ابحث لك عن هواية أخرى! ربما الرسم أو القراءة أفضل.",
+    "توقف من فضلك! أنا أترجاك، هل تسمعني؟",
+    "لقد سئمت الى اللقاء)",
+    ""
   ];
 
   const currentMessage = () => {
     const count = clickCount();
     if (count >= messages.length) {
       return messages[messages.length - 1];
+    }
+
+    if (count + 1 === messages.length) {      
+      document.querySelector('.easter-egg')?.classList.add('hidden');
+      setTimeout(() => {
+        document.querySelector('.easter-egg')?.classList.remove('hidden');
+        document.querySelector('.easter-egg')?.setAttribute('disabled', 'true');
+      }, 5000);
     }
     return messages[count];
   };
